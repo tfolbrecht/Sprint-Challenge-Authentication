@@ -29,20 +29,34 @@ Implement an User Authentication System in order to access the jokes from the Jo
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. What is the purpose of using _sessions_?
-1. What does bcrypt do to help us store passwords in a secure manner.
-1. What does bcrypt do to slow down attackers?
-1. What are the three parts of the JSON Web Token?
+
+Sessions store information. Client sessions store client side, Server sessions server side.
+
+2. What does bcrypt do to help us store passwords in a secure manner.
+
+bcrypt is a hashing function. A function which uses the password as key serverside to create a hash.
+The hash is stored in a database in place of a plaintext password. If the hashed passwords are leaked, under best implimentation practices it is difficult or impossible to obtain the origin plaintext passwords.
+
+3. What does bcrypt do to slow down attackers?
+
+bcrypt is adaptive function meaning you can make the function more computationally expensive by increasing its "work factor."
+
+4. What are the three parts of the JSON Web Token?
+
+Header: Algorithm and token type
+Payload: JSON like object
+Signature: Encoding the header and payload, then signed with a secret. 
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on this Branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
